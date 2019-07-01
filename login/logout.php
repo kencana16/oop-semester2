@@ -1,8 +1,7 @@
 <?php
 
-require_once "classLogin.php";
+require_once "../class/classLogin.php";
 
-      $login = new login;
       $login->logout();
 
 

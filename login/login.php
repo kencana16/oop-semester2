@@ -12,7 +12,6 @@
 		$user = $_POST['username'];
 		$pass = MD5($_POST['password']);
 
-		$login = new login;
 		$login->cekLogin($user,$pass);
 		//$_SESSION['susername'] = $user;
 

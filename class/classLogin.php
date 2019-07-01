@@ -26,5 +26,7 @@ class login extends conn{
                   header("location:../login/login.php");
             }
       }
+
+      $login = new login;
       
       ?>
