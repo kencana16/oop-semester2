@@ -17,10 +17,10 @@
 	</head>
 	<body>
         <?php
-        require_once('classMhs.php');
+        require_once('../class/classMhs.php');
         include "../login/header.php";
 
-        $mhs = new mhs;
+
         $smtp = $mhs->read();
 
         ?>
@@ -28,10 +28,10 @@
         <div class="container-fluid">
             <h2 class="text-center mb-4">Daftar Mahasiswa</h2>
             <div class="d-flex justify-content-end mb-2">
-                <form class="form-inline  m-0 mr-2" action="" method="POST">
+                <!-- <form class="form-inline  m-0 mr-2" action="" method="POST">
                     <input class="form-control mr-1" type="text" name="search" id="search" autofocus>
                     <button class="btn btn-outline-info" name="btnsearch">Cari</button>
-                </form>
+                </form> -->
                 <a href="addMhs.php" class="btn btn-info">Tambah Mahasiswa</a>
             </div>
 

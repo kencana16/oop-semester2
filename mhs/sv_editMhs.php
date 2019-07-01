@@ -1,6 +1,6 @@
 <?php
 
-    	require_once('classMhs.php');
+    	require_once('../class/classMhs.php');
 
 	$nim = $_POST['fnim'];
 	$nmMhs = $_POST['fnama'];
@@ -9,7 +9,6 @@
 	$keterangan = $_POST['keterangan'];
 
 	
-	$mhs = new mhs;
 	$mhs->update($nim,$nmMhs,$jkel,$kota,$keterangan);
 	
 	//kembali ke form

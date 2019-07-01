@@ -1,7 +1,6 @@
 <?php
-    require_once('classMhs.php');
+    require_once('../class/classMhs.php');
     $qnim = $_GET['qnim'];
 
-	$mhs = new mhs;
 	$mhs->delete($qnim);
 ?>

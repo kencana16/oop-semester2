@@ -17,14 +17,11 @@
 	<body>
 		<div class="container">
             <?php
-				include "../conn.php";
+				include "../class/classMhs.php";
 				$qnim = $_GET['qnim'];
 
-				$sql = "SELECT * FROM mhs WHERE nim = '$qnim' ";
-				$smtp=$conn->prepare($sql);
-				$smtp->execute();
 				
-				$hsl = $smtp->fetch(PDO::FETCH_ASSOC);
+				$hsl = $mhs->read($qnim)->fetch(PDO::FETCH_ASSOC); //method read sudah mengembalikan nilai smtp
            ?>
 			<h1>Edit Mahasiswa</h1>
 				<form action= "sv_editMhs.php?qnim=<?php echo $qnim ?>" method="post">

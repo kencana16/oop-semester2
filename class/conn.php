@@ -18,5 +18,9 @@
                     echo "Connection failed: " . $error->getMessage();
               };
         }
+
+        protected function close(){
+            $this->conn = null;
+        }
     }
 ?>    

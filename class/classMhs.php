@@ -9,21 +9,23 @@
                   $smtp = $this->conn->prepare($sql);
                   $smtp->execute();
                   
-                  $this->conn = close();
+                  $this->close();
             }
 
             public function read($nim=''){
                   if($nim==''){
                         $sql = "select * from mhs order by nim";
                   }else if(!$nim==''){
-                        $sql = "select * from mhs where nim = $nim";
+                        $sql = "select * from mhs where nim ='$nim'";
                   }
 
                   $smtp = $this->conn->prepare($sql);
                   $smtp->execute();
                   
+                  $this->close();
 
                   return $smtp;
+                  
             }
 
             public function update($nim,$nmMhs,$jkel,$kota,$keterangan){
@@ -31,7 +33,7 @@
                   $smtp = $this->conn->prepare($sql);
                   $smtp->execute();
                   
-                  $conn = close();
+                  $this->close();
             }
 
             public function delete($qnim){
@@ -42,12 +44,13 @@
                   $smtp->execute();
                   
                   //tutup koneksi
-                  $conn = null;
+                  $this->close();
                   
                   //kembali ke form
                   header ("location: updateMhs.php");
             }
+
       }
 
-
+      $mhs = new mhs; //membuat objek dari class diatas
 ?>
