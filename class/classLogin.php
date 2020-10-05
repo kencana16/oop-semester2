@@ -1,7 +1,6 @@
 <?php
 require "conn.php";
 class login extends conn{
-           
             public function cekLogin($username,$password){
                   $sql="select * from login where user='$username' and pass='$password' ";
                   
